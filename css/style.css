@@ -1,0 +1,468 @@
+/* CONFIGURAÇÃO BÁSICA DO CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    /* background-color: gray; */
+}
+
+/* CONFIGURAÇÃO Auxiliares */
+
+.container{
+	max-width: 1280px;
+    margin:0 auto;
+    padding: 0 2%;
+}
+
+.clear{
+	clear: both;
+}
+
+/* ************************************** */
+/* CONFIGURAÇÃO DO ARQUIVO ATUAL DO SITE */
+/* inicio do Section-Main */
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+section.main {
+    position: relative;
+    background-image: url('../images/bg1.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+    width: 100%;
+    padding: 10px 2%;
+    min-height: 800px;
+}
+
+section.main header {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+.icon-social {
+    float: right;
+}
+
+.icon-social a {
+    color: white;
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.logo {
+    margin-top: 20px;
+    float: left;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav.desktop {
+    margin-top: 20px;
+    float: right;
+}
+
+nav.desktop ul{
+    list-style-type: none;
+}
+
+nav.desktop ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav.desktop ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+nav.mobile {
+    display: none;
+    float: right;
+}
+
+nav.mobile > i {
+    position: relative;
+    top: 37px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+}
+
+/* Lembrar da regra do z-index e do position, pois interferem no que tiver por cima e por baixo, conforme explicado na aula FIX-Z-Index do Curso Front-end-completo 0.1 */
+nav.mobile ul {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    list-style-type: none;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+nav.mobile li {
+    padding: 10px 0;
+    border-bottom: 2px solid #2692ff;
+}
+
+nav.mobile li:nth-of-type(1) {
+    border-top: 2px solid #2692ff;
+}
+
+nav.mobile a {
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2693ff;
+}
+
+.conteudo-header {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 150px 0;
+    color: white;
+}
+
+.conteudo-header h2 {
+    font-size: 44px;
+    font-weight: lighter;
+}
+
+span {
+    color: #2692ff;
+}
+
+.conteudo-header p {
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.conteudo-header a {
+    margin-top: 18px;
+    display: block;
+    width: 120px;
+    height: 44px;
+    background-color: #2693ff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 44px;
+    font-weight: lighter;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/* ************************************** */
+/* inicio do Section-planos */
+.chamada-planos {
+    width: 100%;
+    text-align: center;
+    padding: 30px 2%;
+    background-color: rgb(200,200,200);
+}
+
+.chamada-planos h2 {
+    display: inline-block;
+    border-top: 2px solid #2692ff;
+    color: #2692ff;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* section box-planos */
+section.box-planos {
+    padding: 40px 0;
+}
+
+section.box-planos > .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.box-planos .box-planos-single {
+    width: 33.3%;
+    padding: 0 50px;
+}
+
+section.box-planos .box-planos-single .box-planos-wraper{
+    width: 100%;
+    -webkit-box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+    -moz-box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+    box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+    border: 2px solid #cccccc;
+    min-height: 300px;
+    max-width: 350px;
+}
+
+section.box-planos h2 {
+    background-color: #2692ff;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+.pontos-plano {
+    padding: 8px 0 15px 0px;
+}
+
+section.box-planos p {
+    color: #777777;
+    font-size: 17px;
+    padding: 0 2%;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+section.box-planos .box-planos-single .box-planos-wraper .preco {
+    margin-top: 10px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+section.box-planos .box-planos-single .box-planos-wraper .preco > h2 {
+    font-size: 24px;
+    color: #777777;
+    padding: 0 20px;
+    background-color: transparent;
+    display: inline-block;
+    border-top: 2px solid #cccccc;
+}
+
+/* ************************************** */
+/* inicio do Section-parallax */
+section.parallax {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-image: url('../images/bg_parallax.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+section.parallax > .container {
+    position: relative;
+    z-index: 2;
+    margin: 40px auto;
+    max-width: 960px;
+    color: white;
+}
+
+section.parallax h2 {
+    padding-top: 25px;
+    text-align: center;
+}
+
+section.parallax p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.overlay-parallax {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(20,20,20,0.6);
+}
+
+/* ************************************** */
+/* inicio do Section-final-section */
+section.final-section {
+    padding: 30px 0;
+}
+
+.w50 {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    margin: 15px 0;
+}
+
+section.final-section h2{
+    position: relative;
+    font-weight: lighter;
+    color: #777777;
+    font-size: 24px;
+}
+
+section.final-section h2 > .border-efeito {
+    width: 50px;
+    height: 2px;
+    background-color: #777777;
+    position: absolute;
+    transition: 0.4s;
+}
+
+section.final-section h2:hover > .border-efeito {
+    width: 100px;
+}
+
+.contato form {
+    margin-top: 15px;
+}
+
+.contato input:not([type=submit]){
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    display: block;
+    padding-left: 8px;
+    margin-top: 10px;
+}
+
+.contato textarea {
+    font-size: 15px;
+    width: 100%;
+    height: 120px;
+    border: 2px solid #ccc;
+    padding: 8px;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+.contato input[type=submit]{
+    cursor: pointer;
+    background-color: #2693ff;
+    color: white;
+    border: 0;
+    width: 100px;
+    height: 33px;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.equipe > .w50 {
+    width: 46%;
+    margin: 15px 2%;
+}
+
+.equipe-single {
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    min-height: 300px;
+    -webkit-box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+    -moz-box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+    box-shadow: 13px 7px 5px -2px rgba(0,0,0,0.59);
+}
+
+.topo-box-usuario {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.equipe-single .box-avatar {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    vertical-align: middle;
+    /* aplicar background-image, com a imagem que quiser */
+}
+
+.info-usuario {
+    display: inline-block;
+    color: #999999;
+    padding-left: 8px;
+    vertical-align: middle;
+}
+
+.descricao-usuario-box{
+    color: #777777;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 10px 2%;
+    text-align: center;
+}
+
+/* ************************************** */
+/* inicio do footer */
+footer {
+    width: 100%;
+    padding: 20px 2%;
+    text-align: center;
+    color:  #000000;
+    background-color: #67aff7;
+}
+
+
+
+
+
+
+
+
+/* ************************************************** */
+/* Inicio das medias screen */
+/* max-width: 768px */
+@media screen and (max-width: 768px){
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    section.box-planos {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    section.box-planos > .container {
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    section.box-planos .box-planos-single {
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+        min-width: 300px;
+    }
+
+    section.final-section {
+        padding: 15px 0;
+    }
+
+    .w50 {
+        width: 100%;
+    }
+
+    .equipe > .w50 {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
